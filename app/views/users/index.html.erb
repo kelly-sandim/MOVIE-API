@@ -1,0 +1,12 @@
+<% 	@popular = Tmdb::Movie.popular({region: 'us'}) %>
+<h2>Filmes Populares - <%= @popular.total_results %> movies</h2>
+
+<ul class="movies-list">
+<% 	@popular = Tmdb::Movie.popular({region: 'us'}) %>
+	<% @popular.results.each do |movie| %>
+		<% if movie %>
+			<%= render partial: 'users/movie', collection: movie, locals: {movie: movie} %>
+		<% end %> 
+	<% end %>
+</ul>
+

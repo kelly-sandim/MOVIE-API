@@ -1,0 +1,24 @@
+<html>
+              <body>
+                        
+                          <% if current_user == @user %>
+                                     <ul>
+                                                 <li><%= link_to "Edit", edit_user_path(current_user) %></li>
+                                                 <li><%= link_to "Delete", @user, method: :delete%></li>
+                                     </ul>
+									
+									<ul class="movies-list">
+										<% @popular.results.each do |movie| %>
+											<% if movie %>
+												<%= render partial: 'users/movie', collection: movie, locals: {movie: movie} %>
+											<% end %> 
+										<% end %>
+									</ul>
+
+									<span class="pagination" data-pagination-endpoint="/movies/pagination/" data-pagination-pages="<%= @popular.total_pages %>">
+										Loading...
+									</span>
+
+                          <%end%>
+              </body>
+  </html>
