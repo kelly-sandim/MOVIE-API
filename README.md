@@ -22,5 +22,5 @@ Para conseguir fazer rodar o código, é necessário abrir o terminal e executar
  https://github.com/18Months/themoviedb-api</sub>
  
  ### Fontes utilizadas para me ajudar a montar esse app
- https://github.com/lesleyhogg/tmdb-1
- https://www.devmedia.com.br/ruby-on-rails-implementando-autenticacao-de-usuario/32124
+ * https://github.com/lesleyhogg/tmdb-1
+ * https://www.devmedia.com.br/ruby-on-rails-implementando-autenticacao-de-usuario/32124
